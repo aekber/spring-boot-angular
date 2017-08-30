@@ -1,0 +1,38 @@
+<div ui-view=""></div>
+
+<h4>Insurances</h4>
+
+<button type="button" class="btn btn-primary" ui-sref="admin.insurances.add">
+    Insert Insurance
+</button>
+
+<br /><br />
+
+<table class="table">
+    <thead>
+    <th>Insurance ID</th>
+    <th>Insurance Name</th>
+    <th>Coverage Start</th>
+    <th>Coverage End</th>
+    <th>Risk</th>
+    </thead>
+    <tbody>
+    <tr ng-repeat="insurance in insurances">
+        <td>{{insurance.insuranceId}}</td>
+        <td>{{insurance.name}}</td>
+        <td>{{insurance.coverageStart}}</td>
+        <td>{{insurance.coverageEnd}}</td>
+        <td>{{insurance.risk}}</td>
+        <td>
+            <button type="button" class="btn btn-warning" ui-sref="admin.insurances.edit({insuranceId: insurance.insuranceId})">
+                Edit
+            </button>
+        </td>
+        <td>
+            <button type="button" class="btn btn-danger" ng-click="delete(insurance)">
+                Delete
+            </button>
+        </td>
+    </tr>
+    </tbody>
+</table>

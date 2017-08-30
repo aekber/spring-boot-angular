@@ -1,0 +1,29 @@
+<h1>Sell Insurance</h1>
+
+<form ng-submit="calculate(selectedInsuranceRisk, enteredCoverage)">
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h1 class="panel-title">
+            Select
+        </h1>
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <label>Choose insurance which you want to buy</label>
+            <select class="form-control" ng-model="selectedInsuranceRisk">
+				<option ng-repeat="insurance in insurances" value="{{insurance.risk}}">{{insurance.name}}</option>
+			</select>
+			&nbsp;
+			<label>Enter Coverage</label>
+            <input type="text" class="form-control" ng-model="enteredCoverage" />
+        </div>
+    </div>
+</div>
+
+
+ <button type="submit" class="btn btn-success">
+ 	Calculate
+ </button>
+
+</form>

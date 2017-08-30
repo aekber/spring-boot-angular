@@ -1,0 +1,30 @@
+<h4>Insert Insurance</h4>
+
+<form ng-submit="save()">
+
+    <div class="form-group">
+        <label>Insurance Name</label>
+        <input type="text" class="form-control" ng-model="insurance.name" required="required" />
+    </div>
+
+    <div class="form-group">
+        <label>Coverage Start</label>
+        <input type="text" class="form-control" ng-model="insurance.coverageStart" required="required" />
+    </div>
+    
+    <div class="form-group">
+        <label>Coverage End</label>
+        <input type="text" class="form-control" ng-model="insurance.coverageEnd" required="required" />
+    </div>
+    
+    <div class="form-group">
+        <label>Risk</label>
+        <input type="text" class="form-control" ng-model="insurance.risk" required="required" />
+    </div>
+
+    <button type="submit" class="btn btn-success">
+        Insert
+    </button>
+
+
+</form>
